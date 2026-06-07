@@ -6,3 +6,4 @@
 /src/my_format-*.adb
 *.my_format
 *.pb
+/src/*.d
