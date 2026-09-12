@@ -387,7 +387,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / File_Descriptor_Set'Size);
       Aux_Data    : File_Descriptor_Set_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new File_Descriptor_Set_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -497,7 +497,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / File_Descriptor_Proto'Size);
       Aux_Data    : File_Descriptor_Proto_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new File_Descriptor_Proto_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -704,7 +704,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Descriptor_Proto'Size);
       Aux_Data    : Descriptor_Proto_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Descriptor_Proto_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -894,7 +894,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Extension_Range'Size);
       Aux_Data    : Extension_Range_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Extension_Range_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -1022,7 +1022,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Reserved_Range'Size);
       Aux_Data    : Reserved_Range_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Reserved_Range_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -1139,7 +1139,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Extension_Range_Options'Size);
       Aux_Data    : Extension_Range_Options_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Extension_Range_Options_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -1278,7 +1278,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Declaration'Size);
       Aux_Data    : Declaration_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Declaration_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -1419,7 +1419,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Field_Descriptor_Proto'Size);
       Aux_Data    : Field_Descriptor_Proto_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Field_Descriptor_Proto_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -1620,7 +1620,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Oneof_Descriptor_Proto'Size);
       Aux_Data    : Oneof_Descriptor_Proto_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Oneof_Descriptor_Proto_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -1742,7 +1742,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Enum_Descriptor_Proto'Size);
       Aux_Data    : Enum_Descriptor_Proto_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Enum_Descriptor_Proto_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -1895,7 +1895,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Enum_Reserved_Range'Size);
       Aux_Data    : Enum_Reserved_Range_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Enum_Reserved_Range_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -2017,7 +2017,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Enum_Value_Descriptor_Proto'Size);
       Aux_Data    : Enum_Value_Descriptor_Proto_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=
             new Enum_Value_Descriptor_Proto_Array (1 .. Init_Length);
 
@@ -2151,7 +2151,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Service_Descriptor_Proto'Size);
       Aux_Data    : Service_Descriptor_Proto_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Service_Descriptor_Proto_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -2283,7 +2283,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Method_Descriptor_Proto'Size);
       Aux_Data    : Method_Descriptor_Proto_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Method_Descriptor_Proto_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -2438,7 +2438,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / File_Options'Size);
       Aux_Data    : File_Options_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new File_Options_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -2724,7 +2724,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Message_Options'Size);
       Aux_Data    : Message_Options_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Message_Options_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -2889,7 +2889,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Field_Options'Size);
       Aux_Data    : Field_Options_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Field_Options_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -3109,7 +3109,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Edition_Default'Size);
       Aux_Data    : Edition_Default_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Edition_Default_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -3227,7 +3227,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Feature_Support'Size);
       Aux_Data    : Feature_Support_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Feature_Support_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -3366,7 +3366,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Oneof_Options'Size);
       Aux_Data    : Oneof_Options_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Oneof_Options_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -3483,7 +3483,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Enum_Options'Size);
       Aux_Data    : Enum_Options_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Enum_Options_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -3629,7 +3629,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Enum_Value_Options'Size);
       Aux_Data    : Enum_Value_Options_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Enum_Value_Options_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -3777,7 +3777,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Service_Options'Size);
       Aux_Data    : Service_Options_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Service_Options_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -3904,7 +3904,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Method_Options'Size);
       Aux_Data    : Method_Options_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Method_Options_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -4041,7 +4041,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Uninterpreted_Option'Size);
       Aux_Data    : Uninterpreted_Option_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Uninterpreted_Option_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -4200,7 +4200,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Name_Part'Size);
       Aux_Data    : Name_Part_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Name_Part_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -4304,7 +4304,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Feature_Set'Size);
       Aux_Data    : Feature_Set_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Feature_Set_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -4484,7 +4484,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Visibility_Feature'Size);
       Aux_Data    : Visibility_Feature_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Visibility_Feature_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -4586,7 +4586,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Feature_Set_Defaults'Size);
       Aux_Data    : Feature_Set_Defaults_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Feature_Set_Defaults_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -4720,7 +4720,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Feature_Set_Edition_Default'Size);
       Aux_Data    : Feature_Set_Edition_Default_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=
             new Feature_Set_Edition_Default_Array (1 .. Init_Length);
 
@@ -4858,7 +4858,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Source_Code_Info'Size);
       Aux_Data    : Source_Code_Info_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Source_Code_Info_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -4963,7 +4963,7 @@ package body Google.Protobuf.Descriptor is
       Init_Length : constant Positive := Positive'Max (1, 256 / Location'Size);
       Aux_Data    : Location_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Location_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -5091,7 +5091,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Generated_Code_Info'Size);
       Aux_Data    : Generated_Code_Info_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Generated_Code_Info_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -5199,7 +5199,7 @@ package body Google.Protobuf.Descriptor is
         Positive'Max (1, 256 / Annotation'Size);
       Aux_Data    : Annotation_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Annotation_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
