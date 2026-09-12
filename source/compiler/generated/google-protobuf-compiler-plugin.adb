@@ -45,7 +45,7 @@ package body Google.Protobuf.Compiler.Plugin is
       Init_Length : constant Positive := Positive'Max (1, 256 / Version'Size);
       Aux_Data    : Version_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Version_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -177,7 +177,7 @@ package body Google.Protobuf.Compiler.Plugin is
         Positive'Max (1, 256 / Code_Generator_Request'Size);
       Aux_Data    : Code_Generator_Request_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Code_Generator_Request_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -319,7 +319,7 @@ package body Google.Protobuf.Compiler.Plugin is
         Positive'Max (1, 256 / Code_Generator_Response'Size);
       Aux_Data    : Code_Generator_Response_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Code_Generator_Response_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -462,7 +462,7 @@ package body Google.Protobuf.Compiler.Plugin is
       Init_Length : constant Positive := Positive'Max (1, 256 / File'Size);
       Aux_Data    : File_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new File_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then

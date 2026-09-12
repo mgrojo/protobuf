@@ -26,7 +26,7 @@ package body Google.Protobuf.Wrappers is
         Positive'Max (1, 256 / Double_Value'Size);
       Aux_Data    : Double_Value_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Double_Value_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -127,7 +127,7 @@ package body Google.Protobuf.Wrappers is
         Positive'Max (1, 256 / Float_Value'Size);
       Aux_Data    : Float_Value_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Float_Value_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -228,7 +228,7 @@ package body Google.Protobuf.Wrappers is
         Positive'Max (1, 256 / Int_64Value'Size);
       Aux_Data    : Int_64Value_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Int_64Value_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -329,7 +329,7 @@ package body Google.Protobuf.Wrappers is
         Positive'Max (1, 256 / UInt_64Value'Size);
       Aux_Data    : UInt_64Value_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new UInt_64Value_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -430,7 +430,7 @@ package body Google.Protobuf.Wrappers is
         Positive'Max (1, 256 / Int_32Value'Size);
       Aux_Data    : Int_32Value_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Int_32Value_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -531,7 +531,7 @@ package body Google.Protobuf.Wrappers is
         Positive'Max (1, 256 / UInt_32Value'Size);
       Aux_Data    : UInt_32Value_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new UInt_32Value_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -632,7 +632,7 @@ package body Google.Protobuf.Wrappers is
         Positive'Max (1, 256 / Bool_Value'Size);
       Aux_Data    : Bool_Value_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Bool_Value_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -733,7 +733,7 @@ package body Google.Protobuf.Wrappers is
         Positive'Max (1, 256 / String_Value'Size);
       Aux_Data    : String_Value_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new String_Value_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -834,7 +834,7 @@ package body Google.Protobuf.Wrappers is
         Positive'Max (1, 256 / Bytes_Value'Size);
       Aux_Data    : Bytes_Value_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Bytes_Value_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then

@@ -52,7 +52,7 @@ package body Conformance.Conformance is
         Positive'Max (1, 256 / Test_Status'Size);
       Aux_Data    : Test_Status_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Test_Status_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -159,7 +159,7 @@ package body Conformance.Conformance is
         Positive'Max (1, 256 / Failure_Set'Size);
       Aux_Data    : Failure_Set_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Failure_Set_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -266,7 +266,7 @@ package body Conformance.Conformance is
         Positive'Max (1, 256 / Conformance_Request'Size);
       Aux_Data    : Conformance_Request_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Conformance_Request_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -432,7 +432,7 @@ package body Conformance.Conformance is
         Positive'Max (1, 256 / Conformance_Response'Size);
       Aux_Data    : Conformance_Response_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Conformance_Response_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
@@ -609,7 +609,7 @@ package body Conformance.Conformance is
         Positive'Max (1, 256 / Jspb_Encoding_Config'Size);
       Aux_Data    : Jspb_Encoding_Config_Array_Access;
    begin
-      if Self.Length = 0 then
+      if Self.Data = null then
          Self.Data :=  new Jspb_Encoding_Config_Array (1 .. Init_Length);
 
       elsif Self.Length = Self.Data'Last then
